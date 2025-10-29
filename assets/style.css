@@ -160,117 +160,9 @@ h1,h2,h3{margin-top:24px;margin-bottom:16px}
   border-radius: 8px;
 }
 
-/* ====== MOBILE (≤ 480px) ====== */
-@media (max-width: 480px){
+/* ======= Responsive clean version ======= */
 
-  /* Brand + menu: on arrête la bagarre */
-  header.header{
-    display:flex;
-    align-items:flex-start;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    row-gap:8px;
-  }
-  header a.brand{
-    font-size:1.35rem !important;
-    line-height:1.2;
-    white-space:nowrap;   /* évite la casse dégueu du titre */
-    margin-right:auto;
-  }
-  .nav{
-    display:flex;
-    gap:12px;
-    flex:0 1 auto;
-    width:100%;           /* menu passe à la ligne si besoin */
-  }
-  .nav a{ white-space:nowrap; font-size:.95rem; }
-
-  /* Héros d’accueil: une seule colonne */
-  .hero,
-  .grid-2{ 
-    display:grid; 
-    grid-template-columns:1fr !important; 
-    gap:var(--gap);
-  }
-
-  /* Carrousel: plein pot en largeur, respiration ok */
-  .carousel{
-    max-width:100% !important;
-    width:100% !important;
-    margin:12px 0 24px !important;
-  }
-
-  /* Listes plus aérées */
-  .bullets li{ margin-bottom:6px; }
-  
-  /* Gros titres un poil plus sages */
-  h1{ font-size:1.6rem; }
-}
-
-/* ====== PETITES TABLETTES (481–900px) ====== */
-@media (min-width:481px) and (max-width:900px){
-  header a.brand{ font-size:1.6rem !important; }
-  .grid-2{ grid-template-columns:1fr; }
-  .carousel{ max-width:100%; margin:16px 0 32px; }
-}
-/* — Header responsive — */
-.header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  flex-wrap:wrap;              /* autorise le retour à la ligne */
-}
-
-header a.brand{
-  white-space:nowrap;          /* évite la coupure débile du titre */
-  margin-right:auto;
-}
-
-.nav{ 
-  display:flex; 
-  gap:12px; 
-  flex-wrap:wrap;              /* le menu peut aussi passer à la ligne */
-}
-
-.nav a{ white-space:nowrap; }
-
-@media (max-width: 700px){
-  header a.brand{ font-size:1.35rem; }   /* titre un poil plus petit */
-  .nav a{ font-size:.95rem; }            /* liens un peu plus petits */
-}
-/* ===== Fix centrage portrait page À propos ===== */
-
-/* ======= HEADER : pas de coupure moche, menu qui passe à la ligne ======= */
-header a.brand{ white-space:nowrap; margin-right:auto; }
-.header{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; row-gap:8px; }
-.nav{ display:flex; gap:16px; flex:0 1 auto; }
-.nav a{ white-space:nowrap; }
-
-/* ======= Mobile tweaks (iPhone & co) ======= */
-@media (max-width: 480px){
-  :root{ --gap:16px; }              /* un peu moins de marge globale */
-  .wrap{ padding:0 16px; }          /* évite le texte collé aux bords */
-  header a.brand{ font-size:1.25rem; }
-  .nav{ gap:12px; flex-wrap:wrap; } /* le menu peut passer sur 2 lignes */
-  .nav a{ font-size:.95rem; }
-
-  /* Carrousel et carte: respirent en mobile */
-  .carousel{ max-width:100%; margin:12px 0 24px; }
-
-  /* Page "À propos" : photo non positionnée en absolu sur mobile */
-  .intro-wrap{ padding-right:0; }
-  .intro-wrap .portrait{
-    position:static;
-    width:140px;
-    margin:.5rem 0 0;
-  }
-
-  /* Petites respirations dans le texte/listes */
-  p{ margin:0 0 0.75rem; }
-  ul{ padding-left:20px; margin:0.5rem 0 1rem; }
-}
-/* ===== Fix centrage portrait page À propos ===== */
+/* Tablettes et mobiles (jusqu’à 900px) */
 @media (max-width: 900px){
   .intro-wrap{
     display: flex;
@@ -285,4 +177,35 @@ header a.brand{ white-space:nowrap; margin-right:auto; }
     height: auto;
     margin-bottom: 1rem;
   }
+}
+
+/* Petits écrans (≤ 480px) */
+@media (max-width: 480px){
+  :root{ --gap:16px; }
+  .wrap{ padding:0 16px; }
+
+  header.header{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    row-gap:8px;
+  }
+  header a.brand{
+    font-size:1.25rem;
+    line-height:1.2;
+    white-space:nowrap;
+    margin-right:auto;
+  }
+  .nav{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .nav a{ font-size:.95rem; }
+
+  .carousel{ max-width:100%; margin:12px 0 24px; }
+
+  p{ margin:0 0 .75rem; }
+  ul{ padding-left:20px; margin:.5rem 0 1rem; }
 }
