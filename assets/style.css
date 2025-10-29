@@ -226,3 +226,5 @@ h1,h2,h3{margin-top:24px;margin-bottom:16px}
     gap: 12px;
   }
 }
+/* Laisser le titre respirer aussi sur petits/moyens écrans */
+header a.brand{ text-wrap: balance; }
