@@ -259,3 +259,19 @@ header a.brand{ white-space:nowrap; margin-right:auto; }
     word-break: break-word !important;
   }
 }
+nav a {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid #4C83B0; /* ton bleu principal */
+  border-radius: 8px;
+  text-decoration: none;
+  color: #4C83B0;
+  transition: all 0.3s ease;
+  background-color: white; /* tu peux tester transparent si tu veux plus léger */
+  margin: 0 5px;
+}
+
+nav a:hover {
+  background-color: #4C83B0;
+  color: white;
+}
