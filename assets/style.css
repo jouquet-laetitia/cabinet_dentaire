@@ -160,16 +160,6 @@ h1,h2,h3{margin-top:24px;margin-bottom:16px}
   border-radius: 8px;
 }
 
-@media (max-width: 900px){
-  .intro-wrap{
-    padding-right: 0;
-  }
-  .intro-wrap .portrait{
-    position: static;    /* redevient “normale” en mobile */
-    width: 160px;
-    margin: .5rem 0 0;
-  }
-}
 /* ====== MOBILE (≤ 480px) ====== */
 @media (max-width: 480px){
 
@@ -250,26 +240,7 @@ header a.brand{
   .nav a{ font-size:.95rem; }            /* liens un peu plus petits */
 }
 /* ===== Fix centrage portrait page À propos ===== */
-@media (max-width: 900px){
-  .intro-wrap{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-right: 0 !important;
-  }
 
-  .intro-wrap .portrait{
-    position: static !important;
-    width: 180px !important;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-
-  .intro-wrap p{
-    text-align: left; /* tu peux mettre center si tu préfères */
-  }
-}
 /* ======= HEADER : pas de coupure moche, menu qui passe à la ligne ======= */
 header a.brand{ white-space:nowrap; margin-right:auto; }
 .header{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; row-gap:8px; }
@@ -298,4 +269,20 @@ header a.brand{ white-space:nowrap; margin-right:auto; }
   /* Petites respirations dans le texte/listes */
   p{ margin:0 0 0.75rem; }
   ul{ padding-left:20px; margin:0.5rem 0 1rem; }
+}
+/* ===== Fix centrage portrait page À propos ===== */
+@media (max-width: 900px){
+  .intro-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-right: 0;
+  }
+  .intro-wrap .portrait{
+    position: static;
+    width: 180px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
 }
