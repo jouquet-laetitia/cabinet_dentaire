@@ -226,5 +226,13 @@ h1,h2,h3{margin-top:24px;margin-bottom:16px}
     gap: 12px;
   }
 }
-/* Laisser le titre respirer aussi sur petits/moyens écrans */
-header a.brand{ text-wrap: balance; }
+/* === Fix iPhone: titre Accueil trop gros === */
+@media (max-width: 480px){
+  h1{
+    font-size: 1.55rem !important;
+    line-height: 1.2 !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    margin: 0 0 .75rem !important;
+  }
+}
