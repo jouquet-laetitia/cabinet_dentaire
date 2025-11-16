@@ -1,5 +1,5 @@
 :root{
-  --bg:#E8EEF1; --text:#1E1E1E; --muted:#7A8A97;
+  --bg:#F4F6F8; --text:#1E1E1E; --muted:#7A8A97;
   --accent:#3F6F98; --max:1200px; --gap:24px;
 }
 *{box-sizing:border-box}
