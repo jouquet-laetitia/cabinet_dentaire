@@ -1,6 +1,6 @@
 :root{
   --bg:#E8EEF1; --text:#1E1E1E; --muted:#7A8A97;
-  --accent:#4C83B0; --max:1200px; --gap:24px;
+  --accent:#3F6F98; --max:1200px; --gap:24px;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
