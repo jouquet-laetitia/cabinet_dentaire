@@ -166,12 +166,13 @@ header a.brand{ white-space:nowrap; margin-right:auto; }
 .nav{ display:flex; gap:16px; flex:0 1 auto; }
 .nav a{ white-space:nowrap; }
 
-
+@media (max-width:900px){
   /* Carrousel et carte: respirent en mobile */
   .carousel{ max-width:100%; margin:12px 0 24px; }
 
   /* Page "À propos" : photo non positionnée en absolu sur mobile */
   .intro-wrap{ padding-right:0; }
+
   .intro-wrap .portrait{
     position:static;
     width:140px;
@@ -180,6 +181,7 @@ header a.brand{ white-space:nowrap; margin-right:auto; }
 
   /* Petites respirations dans le texte/listes */
   p{ margin:0 0 0.75rem; }
+
   ul{ padding-left:20px; margin:0.5rem 0 1rem; }
 }
 /* ===== Fix centrage portrait page À propos ===== */
@@ -262,12 +264,12 @@ header a.brand{ white-space:nowrap; margin-right:auto; }
 nav a {
   display: inline-block;
   padding: 8px 16px;
-  border: 2px solid #4C83B0; /* ton bleu principal */
+  border: 2px solid #4C83B0;
   border-radius: 8px;
   text-decoration: none;
   color: #4C83B0;
   transition: all 0.3s ease;
-  background-color: white; /* tu peux tester transparent si tu veux plus léger */
+  background-color: white;
   margin: 0 5px;
 }
 
@@ -275,6 +277,7 @@ nav a:hover {
   background-color: #4C83B0;
   color: white;
 }
+
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -282,14 +285,50 @@ nav {
   gap: 10px;
   margin-bottom: 20px;
 }
+
 @media (max-width: 600px) {
   nav a {
     flex: 1 1 40%; /* deux boutons par ligne */
     text-align: center;
   }
-.brand {
-  display: block;
+
+  .brand {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+}
+/* ===== Bandeau information page d'accueil ===== */
+.info-banner {
+  background: #0B1F3A; /* bleu marine */
+  border-bottom: 1px solid #07172B;
   text-align: center;
-  margin-top: 15px;
-  margin-bottom: 20px;
+  padding: 16px 18px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.info-banner a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.info-banner a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.info-banner .info-banner-text {
+  display: inline-block;
+  max-width: var(--max);
+}
+
+@media (max-width: 480px) {
+  .info-banner {
+    padding: 13px 14px;
+    font-size: 1.1rem;
+    line-height: 1.35;
+  }
 }
