@@ -1,22 +1,26 @@
-// Année auto dans le footer
-document.getElementById('y')?.append(new Date().getFullYear());
-const items = document.querySelectorAll('.carousel-item');
-let index = 0;
+document.getElementById("y")?.append(new Date().getFullYear());
 
-function showSlide(i) {
-  items.forEach(item => item.classList.remove('active'));
-  items[i].classList.add('active');
+const carouselItems = document.querySelectorAll(".carousel-item");
+const nextButton = document.querySelector(".carousel-btn.next");
+const prevButton = document.querySelector(".carousel-btn.prev");
+
+if (carouselItems.length && nextButton && prevButton) {
+  let currentIndex = 0;
+
+  const showSlide = (index) => {
+    carouselItems.forEach((item) => item.classList.remove("active"));
+    carouselItems[index].classList.add("active");
+  };
+
+  nextButton.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % carouselItems.length;
+    showSlide(currentIndex);
+  });
+
+  prevButton.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+    showSlide(currentIndex);
+  });
+
+  showSlide(currentIndex);
 }
-
-document.querySelector('.next').addEventListener('click', () => {
-  index = (index + 1) % items.length;
-  showSlide(index);
-});
-
-document.querySelector('.prev').addEventListener('click', () => {
-  index = (index - 1 + items.length) % items.length;
-  showSlide(index);
-});
-
-// afficher la première
-showSlide(index);
